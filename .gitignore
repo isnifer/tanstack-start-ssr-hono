@@ -31,3 +31,4 @@ dist-ssr
 .output
 .vinxi
 .netlify
+.vercel
