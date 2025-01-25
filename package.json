@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "VITE_API_URL=http://localhost:3000 vinxi dev",
-    "build": "vinxi build",
-    "start": "VITE_API_URL=https://prediva.com vinxi start"
+    "dev": "VITE_API_URL=http://localhost:3000 NODE_ENV=development bunx --bun vinxi dev",
+    "build": "bunx --bun vinxi build",
+    "start": "VITE_API_URL=https://prediva.com NODE_ENV=production bunx --bun vinxi start"
   },
   "dependencies": {
     "@hono/zod-validator": "0.4.2",
@@ -15,12 +15,14 @@
     "hono": "4.6.18",
     "react": "19.0.0",
     "react-dom": "19.0.0",
+    "sonner": "1.7.2",
     "tailwind-merge": "2.6.0",
     "tailwindcss": "4.0.0"
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.0.0",
     "@trivago/prettier-plugin-sort-imports": "5.2.1",
+    "@types/bun": "1.2.0",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
     "@vitejs/plugin-react": "4.3.4",

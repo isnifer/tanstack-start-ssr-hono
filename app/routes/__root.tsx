@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { Outlet, ScrollRestoration, createRootRoute } from '@tanstack/react-router'
 import { Meta, Scripts } from '@tanstack/start'
+import { Toaster } from 'sonner'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -42,6 +43,7 @@ function RootComponent() {
   return (
     <RootDocument>
       <Outlet />
+      <Toaster richColors />
     </RootDocument>
   )
 }
