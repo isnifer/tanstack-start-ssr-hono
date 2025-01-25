@@ -1,8 +1,8 @@
-import '../index.css'
 import type { ReactNode } from 'react'
 import { Outlet, ScrollRestoration, createRootRoute } from '@tanstack/react-router'
 import { Meta, Scripts } from '@tanstack/start'
 import { Toaster } from 'sonner'
+import rootCSS from '../index.css?url'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -19,6 +19,10 @@ export const Route = createRootRoute({
       },
     ],
     links: [
+      {
+        rel: 'stylesheet',
+        href: rootCSS,
+      },
       {
         rel: 'preconnect',
         href: 'https://fonts.googleapis.com',
