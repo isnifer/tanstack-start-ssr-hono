@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "VITE_API_URL=http://localhost:3000 NODE_ENV=development bunx --bun vinxi dev",
     "build": "bunx --bun vinxi build",
-    "start": "VITE_API_URL=https://tanstack-start-ssr-hono.netlify.app NODE_ENV=production bunx --bun run .output/server/index.mjs"
+    "start": "NODE_ENV=production bunx --bun run .output/server/index.mjs"
   },
   "dependencies": {
     "@hono/zod-validator": "0.4.2",
