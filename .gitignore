@@ -27,3 +27,6 @@ dist-ssr
 
 # Generated files
 **/routeTree.gen.ts
+
+.output
+.vinxi
