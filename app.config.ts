@@ -6,6 +6,11 @@ export default defineConfig({
   server: {
     // preset: 'bun',
     preset: 'vercel',
+    runtimeConfig: {
+      app: {
+        baseURL: 'https://tanstack-start-ssr-hono.vercel.app',
+      },
+    },
   },
   vite: {
     plugins: [
