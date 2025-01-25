@@ -6,6 +6,9 @@
     "target": "ES2022",
     "strict": true,
     "skipLibCheck": true,
-    "strictNullChecks": true
-  }
+    "strictNullChecks": true,
+
+    "verbatimModuleSyntax": true
+  },
+  "include": ["app/**/*"]
 }

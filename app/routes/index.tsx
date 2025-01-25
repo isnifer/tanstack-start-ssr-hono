@@ -42,7 +42,7 @@ function RouteComponent() {
         type="button"
         onClick={handleIncrement}
         className="rounded-md bg-blue-500 p-2 text-white">
-        Count: {count}
+        Counter: {count}
       </button>
     </div>
   )
