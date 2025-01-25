@@ -13,5 +13,8 @@ export default defineConfig({
         projects: ['./tsconfig.json'],
       }),
     ],
+
+    // @ts-expect-error — it's removed only from the schema, but it's still available
+    clearScreen: false,
   },
 })
