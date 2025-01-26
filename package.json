@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "VITE_API_URL=http://localhost:3000 NODE_ENV=development bunx --bun vinxi dev",
-    "build": "bunx --bun vinxi build",
+    "build:prod": "bunx --bun vinxi build",
     "start": "NODE_ENV=production bunx --bun run .output/server/index.mjs"
   },
   "dependencies": {
