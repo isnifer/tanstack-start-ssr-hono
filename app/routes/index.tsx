@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, createFileRoute } from '@tanstack/react-router'
 import { hc } from 'hono/client'
 import { toast } from 'sonner'
-import { type AppType } from '../server'
+import type { AppType } from '../server'
 
 const apiClient = hc<AppType>(import.meta.env.VITE_API_URL, {
   init: { credentials: 'include' },
