@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: tanstack-start-ssr-hono
+    runtime: docker
+    repo: https://github.com/isnifer/tanstack-start-ssr-hono
+    plan: starter
+    autoDeploy: true
