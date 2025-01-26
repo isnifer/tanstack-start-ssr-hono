@@ -11,7 +11,7 @@
     "@hono/zod-validator": "0.4.2",
     "@tanstack/react-router": "1.97.21",
     "@tanstack/start": "1.97.22",
-    "hono": "4.6.18",
+    "hono": "4.6.19",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "sonner": "1.7.2",
