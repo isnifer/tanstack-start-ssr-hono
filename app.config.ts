@@ -1,4 +1,4 @@
-import tailwindcss from '@tailwindcss/vite'
+// import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from '@tanstack/start/config'
 import * as process from 'node:process'
 import tsConfigPaths from 'vite-tsconfig-paths'
@@ -9,7 +9,7 @@ export default defineConfig({
   server: { preset },
   vite: {
     plugins: [
-      tailwindcss(),
+      // tailwindcss(), // currently css bundled via PostCSS
       tsConfigPaths({
         projects: ['./tsconfig.json'],
       }),

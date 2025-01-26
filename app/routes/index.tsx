@@ -59,9 +59,7 @@ function RouteComponent() {
       if (error instanceof Error) {
         toast.error(error.message)
       } else {
-        toast.error('An unknown error occurred', {
-          description: JSON.stringify(error),
-        })
+        toast.error('An unknown error occurred', { description: JSON.stringify(error) })
       }
     }
   }
