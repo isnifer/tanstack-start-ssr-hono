@@ -8,6 +8,7 @@ import * as process from 'node:process'
 import { createRouter } from './router'
 
 const preset = process.env.PRODUCTION_PRESET || 'bun'
-const handler = preset === 'bun' ? defaultRenderHandler : defaultStreamHandler
+// const handler = preset === 'bun' ? defaultRenderHandler : defaultStreamHandler
+const handler = preset === 'bun' ? defaultStreamHandler : defaultStreamHandler
 
 export default createStartHandler({ createRouter, getRouterManifest })(handler)
