@@ -8,6 +8,17 @@ import * as process from 'node:process'
 import { createRouter } from './router'
 
 const preset = process.env.PRODUCTION_PRESET || 'bun'
-const handler = preset === 'bun' ? defaultRenderHandler : defaultStreamHandler
+
+const handler: typeof defaultStreamHandler = async ({ request, router, responseHeaders }) => {
+  const { pathname } = new URL(request.url)
+
+  if (pathname === '/bun-stream-error' && preset === 'bun') {
+    return defaultStreamHandler({ request, router, responseHeaders })
+  }
+
+  const defaultHandler = preset === 'bun' ? defaultRenderHandler : defaultStreamHandler
+
+  return defaultHandler({ request, router, responseHeaders })
+}
 
 export default createStartHandler({ createRouter, getRouterManifest })(handler)
