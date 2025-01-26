@@ -12,7 +12,7 @@ const preset = process.env.PRODUCTION_PRESET || 'bun'
 const handler: typeof defaultStreamHandler = async ({ request, router, responseHeaders }) => {
   const { pathname } = new URL(request.url)
 
-  console.log('!!!! PATHNAME !!!!', pathname)
+  console.log('!!!! PATHNAME !!!!', pathname, preset)
 
   if (pathname === '/bun-stream-error' && preset === 'bun') {
     return defaultStreamHandler({ request, router, responseHeaders })
