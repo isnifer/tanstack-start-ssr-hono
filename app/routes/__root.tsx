@@ -1,5 +1,4 @@
-import type { ReactNode } from 'react'
-import { Outlet, ScrollRestoration, createRootRoute } from '@tanstack/react-router'
+import { Outlet, createRootRoute } from '@tanstack/react-router'
 import { Meta, Scripts } from '@tanstack/start'
 import { Toaster } from 'sonner'
 import rootCSS from '../index.css?url'
@@ -53,7 +52,7 @@ function RootComponent() {
   )
 }
 
-function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
+function RootDocument({ children }: React.PropsWithChildren) {
   return (
     <html>
       <head>
@@ -61,7 +60,6 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
       </head>
       <body id="root">
         {children}
-        <ScrollRestoration />
         <Scripts />
       </body>
     </html>
